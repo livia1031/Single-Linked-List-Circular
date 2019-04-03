@@ -168,11 +168,11 @@ int main ()
   cout<<"*********************************************"<<endl;
   
   first_ptr = NULL;
-  data (10);
-  data (12);
-  data (5);
+  data (47);
+  data (31);
+  data (11);
   data (7);
-  data (22);
+  data (4);
   
   do {
     display_list() ;
