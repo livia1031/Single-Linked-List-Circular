@@ -170,6 +170,7 @@ void hapus_node_tertentu () {
   } else {
     cout<<"Data masih kosong, tidak bisa hapus data dari tengah! ";
     getch ();
+    }
   }
     
 
