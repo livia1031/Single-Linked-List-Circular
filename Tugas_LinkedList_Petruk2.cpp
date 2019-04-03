@@ -154,6 +154,23 @@ void hapus_node_tertentu () {
       bantu=bantu->next;
       banyakdata++;
     }
+    if ((posisi_hapus<1)||(posisi_hapus>banyakdata)) {
+      cout<<"Belum ada data !! Masukkan data dulu aja...\n";
+    } else {
+      bantu=first_ptr;
+      poshapus=1;
+      while(poshapus<(posisi_hapus-1)) {
+        bantu=bantu->next;
+        poshapus++;
+      }
+      hapus=bantu->next;
+      bantu->next=hapus->next;
+      delete hapus;
+    }
+  } else {
+    cout<<"Data masih kosong, tidak bisa hapus data dari tengah! ";
+    getch ();
+  }
     
 
 //Atika Istiqomah 1817051004
