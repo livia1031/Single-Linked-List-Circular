@@ -141,4 +141,42 @@ void menyisipkan_node_tertentu()
 }
 
 //Atika Istiqomah 1817051004
+
+int data (int nilai){
+  node *baru;
+  baru = new node;
+  baru->urut = nilai;
+  baru -> next = NULL;
+  
+  if (first_ptr == NULL) {
+    first_ptr = baru;
+    first_ptr->next = NULL;
+  } else {
+    baru->next = first_ptr;
+    first_ptr = baru;
+  }
+}
+
+int main ()
+{
+  cout<<"*********************************************"<<endl;
+  cout<<"NAMA KELOMPOK : "<<endl;
+  cout<<"ATIKA ISTIQOMAH - 1817051004 \n";
+  cout<<"ANISA RADEN - 1817051007 \n";
+  cout<<"LIVIA AYU ISTORIA HERNANI - 1817051031 \n";
+  cout<<"MUTIARA WIDDI AYUNINTYAS - 1817051047 \n";
+  cout<<"*********************************************"<<endl;
+  
+  first_ptr = NULL;
+  data (10);
+  data (12);
+  data (5);
+  data (7);
+  data (22);
+  
+  do {
+    display_list() ;
+      
+    
+
       
