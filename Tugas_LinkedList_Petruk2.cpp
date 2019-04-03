@@ -176,7 +176,28 @@ int main ()
   
   do {
     display_list() ;
-      
-    
+    cout<<endl;
+    cout<<"MENU PILIHAN : "<<endl;
+    cout<<"0. Keluar Program. \n";
+    cout<<"1. Tambah Node Depan. \n";
+    cout<<"2. Tambah Node Belakang. \n";
+    cout<<"3. Hapus Node Depan. \n";
+    cout<<"4. Hapus Node Belakang. \n";
+    cout<<"5. Menyisipkan Node Diposisi Tertentu. \n";
+    cout<<"\n Pilihan >> ";
+    cin>>pilihan;
 
-      
+switch (pilihan) {
+  case 1 : tambah_node_first();
+    break;
+  case 2 : tambah_node_akhir();
+    break;
+  case 3 : hapus_node_first();
+    break;
+  case 4 : hapus_node_akhir();
+    break;
+  case 5 : menyisipkan_node_tertentu();
+  }
+ }
+  while (pilihan != 0);
+}
