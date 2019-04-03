@@ -140,6 +140,22 @@ void menyisipkan_node_tertentu()
   }
 }
 
+// campuran
+
+void hapus_node_tertentu () {
+  int banyakdata, posisi_hapus,poshapus;
+  node *hapus, *bantu;
+  if (first_ptr != NULL) {
+    cout<<"Akan dihapus pada data ke : ";
+    cin>>posisi_hapus;
+    banyakdata = 1;
+    bantu = first_ptr;
+    while (bantu-> next != NULL) {
+      bantu=bantu->next;
+      banyakdata++;
+    }
+    
+
 //Atika Istiqomah 1817051004
 
 int data (int nilai){
