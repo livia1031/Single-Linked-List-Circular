@@ -1,3 +1,4 @@
+
 //Anisa Raden 1817051007
 include <iostream>
 include <conio.h>
@@ -54,5 +55,35 @@ void tambah_node_akhir()
     temp2->next = temp;
   }
 }
+//Livia Ayu Istoria H 1817051031
+void display_list()
+{
+  node *temp;
+  temp = first_ptr;
+  cout<<endl;
+  cout<<" DATA [";
+  if (temp == NULL)
+    cout << "List kosong!"<<endl;
+  else
+  {
+    while (temp != NULL)
+    {
+      cout<<""<<temp->urut<<",";
+      if(temp == posisi)
+        cout<<" <<<< posisi node";
+      temp = temp->next;
+    }
+    cout<<"]";
+    cout<<"Akhir List!"<<endl;
+  }
+}
+void hapus_node_first()
+{
+  node *temp;
+  temp=first_ptr;
+  first_ptr=first_ptr->next;
+  delete temp;
+}
+  
 
       
