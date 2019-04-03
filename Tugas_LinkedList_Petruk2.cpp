@@ -20,6 +20,7 @@ void tambah_node_first()
   cout<<"Masukkan Data : ";
   cin>>baru->urut;
   baru->next = NULL;
+
   if (first_ptr == NULL)
   {
     first_ptr=baru;
@@ -84,6 +85,60 @@ void hapus_node_first()
   first_ptr=first_ptr->next;
   delete temp;
 }
-  
+  // Mutiara Widdi A 1817051047
+void hapus_node_akhir ()
+{
+   node *temp1, *temp2;
+  if (first_ptr == NULL)
+    cout<<"List Kosong !"<<endl;
+    else
+    {
+      temp1 = first_ptr;
+      if (temp1->next == NULL)
+      {
+        delete temp1;
+        first_ptr = NULL;
+      }
+      else
+      {
+        while (temp1->next != NULL)
+        {
+          temp2 = temp1;
+          temp1 = temp1->next;
+        }
+        delete temp1;
+        temp2->next = NULL;
+      }
+    }
+  }
+
+void menyisipkan_node_tertentu()
+{
+  node *baru, *bantu;
+  int posisi_sisip;
+  if (first_ptr != NULL)
+  {
+    cout<<"Akan disisip setelah Data Ke ? : ";
+    cin>>posisi_sisip;
+    baru = new node;
+    bantu = first_ptr;
+    
+    for(int i=1;i<posisi_sisip-1;i++) {
+      if(bantu->next != NULL)
+        bantu=bantu->next;
+      else
+        break;
+    }
+  cout << "Masukkan data : ";
+  cin >> baru->urut;
+  baru->next=bantu->next;
+  bantu->next=baru;
+  }
+  else
+  {
+    cout<<"Belum ada data !! silakan isi data dulu....";
+    getch();
+  }
+}
 
       
