@@ -217,6 +217,7 @@ int main ()
     cout<<"3. Hapus Node Depan. \n";
     cout<<"4. Hapus Node Belakang. \n";
     cout<<"5. Menyisipkan Node Diposisi Tertentu. \n";
+    cout<<"6. Menghapus Node Diposisi Tertentu.\n";
     cout<<"\n Pilihan >> ";
     cin>>pilihan;
 
@@ -230,6 +231,8 @@ switch (pilihan) {
   case 4 : hapus_node_akhir();
     break;
   case 5 : menyisipkan_node_tertentu();
+    break;
+  case 6 : hapus_node_tertentu();
   }
  }
   while (pilihan != 0);
